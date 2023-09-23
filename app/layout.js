@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import React from 'react'
 import { Toaster } from 'react-hot-toast'
 import './globals.css'
@@ -8,7 +8,6 @@ import { Layouts } from '@/components'
 import { Stateagus } from '@/context/Stateagus'
 
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { ReactQueryDevtools } from 'react-query/devtools'; // (Optional) Devtools for debugging
 
 // Create a new instance of QueryClient
 const queryClient = new QueryClient();
@@ -24,6 +23,10 @@ export const metadata = {
   return (
    
   <html lang="en">
+    <head>
+        <title>Title</title>
+        <meta name='description' content='Description' />
+      </head>
       <body>
       <QueryClientProvider client={queryClient}>
       <Stateagus>
